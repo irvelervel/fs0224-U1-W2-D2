@@ -23,6 +23,7 @@ const character = {
     knife: true,
   },
   'name-of-team': 'Alpha',
+  skills: ['shooting', 'killingZombies', 'lockpicking'],
 }
 
 // le proprietà in un oggetto non necessitano di keywork per la dichiarazione (non ci va let, non ci va const)
@@ -73,7 +74,6 @@ const obj2 = {
 const obj3 = {
   name: 'briefcase',
   qty: 30,
-  true: true,
   price: 9.99,
   discountedPrice: 7.99,
 }
@@ -85,3 +85,24 @@ const priceToRead = 'price'
 
 console.log(obj1[priceToRead]) // 2.99
 console.log(obj2[priceToRead]) // 3.99
+
+// con le stesse tecniche è anche possibile modificare il valore di una proprietà, crearne di nuove o eliminarne di esistenti
+// MODIFICA
+obj3.qty = 50
+obj3.discountedPrice = 6.99
+
+// CREAZIONE NUOVE PROPRIETÀ
+obj3.available = false
+
+// ELIMINAZIONE PROPRIETÀ ESISTENTI
+delete obj3.available
+
+// il fatto che obj3 sia stata inizializzata con const previene solamente la sua riassegnazione,
+// ma non pregiudica la modifica, la creazione e la eliminazione delle proprietà in essa contenute
+// obj3 = 'Stefano' // ERRORE
+console.log(obj3)
+
+const newObj3 = obj3
+newObj3.qty = 100
+
+// abbiamo appena modificato ANCHE la qty di obj3 :(
