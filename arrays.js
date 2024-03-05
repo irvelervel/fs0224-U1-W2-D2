@@ -34,3 +34,50 @@ console.log(
   'ULTIMO ELEMENTO DI OTHERNUMBERS',
   otherNumbers[otherNumbers.length - 1]
 )
+
+// ordinare un array in ordine alfabetico
+animals.sort() // animals è cambiato, ed è diventato ['cane', 'gatto']
+const arrayOfThreeNumbers = [2, 3, 1]
+arrayOfThreeNumbers.sort()
+console.log(arrayOfThreeNumbers) // [1, 2, 3]
+
+// aggiungere un elemento ad un array
+// in ultima posizione
+arrayOfThreeNumbers.push(4)
+// arrayOfThreeNumbers è cambiato, ora è diventato [1, 2, 3, 4]
+console.log('arrayOfThreeNumbers', arrayOfThreeNumbers)
+arrayOfThreeNumbers.push(5, 6)
+console.log('arrayOfThreeNumbers', arrayOfThreeNumbers)
+// [1, 2, 3, 4, 5, 6]
+
+// oppure in prima posizione
+arrayOfThreeNumbers.unshift(0)
+// [0, 1, 2, 3, 4, 5, 6]
+
+console.log('arrayOfThreeNumbers', arrayOfThreeNumbers)
+
+// rimuovere l'ultimo elemento di un array
+arrayOfThreeNumbers.pop() // tolgo il 6
+console.log('arrayOfThreeNumbers', arrayOfThreeNumbers)
+arrayOfThreeNumbers.pop() // tolgo il 5
+arrayOfThreeNumbers.pop() // tolgo il 4
+arrayOfThreeNumbers.pop() // tolgo il 3
+console.log('arrayOfThreeNumbers', arrayOfThreeNumbers)
+
+const arrayOfComputers = ['macbook', 'xps15', 'surfacepro']
+// delete arrayOfComputers[1] // funziona, ma lascia un "buco" (non altera la lunghezza dell'array)
+arrayOfComputers.splice(1, 1) // splice richiede tra parentesi l'indice da cui cominciare a rimuovere elementi, e il numero
+// di elementi da rimuovere
+console.log(arrayOfComputers)
+
+const students = [
+  'Federico',
+  'Francesco',
+  'Gabriele',
+  'Giovanni',
+  'Giulio',
+  'Kassandra',
+]
+// inseriamo tra Gabriele e Giovanni il nuovo studente Marco
+students.splice(3, 0, 'Marco') // all'indice 3 (terzo elemento, Giovanni) eliminane 0 e inserisci prima di lui 'Marco'
+console.log('students', students)
